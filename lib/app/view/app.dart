@@ -5,13 +5,21 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:terrapino/counter/counter.dart';
-import 'package:terrapino/l10n/l10n.dart';
+import 'package:terrapino/home/home.dart';
+import 'package:terrapino/models/parse_error.dart';
+import 'package:terrapino/models/uri_result.dart';
+import 'package:terrapino/utils/uri_parser.dart';
 
 class App extends StatelessWidget {
-  const App({super.key});
+  App({
+    super.key,
+  }) {
+    uriResult = parseUri();
+  }
+
+  late final Either<ParseError, UriResult> uriResult;
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +30,12 @@ class App extends StatelessWidget {
           accentColor: const Color(0xFF13B9FF),
         ),
       ),
-      localizationsDelegates: const [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-      ],
-      supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: uriResult.fold(
+        (l) => Text('${l.code} ${l.message}'),
+        (r) => HomePage(
+          uriResult: r,
+        ),
+      ),
     );
   }
 }

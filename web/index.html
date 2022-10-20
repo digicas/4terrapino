@@ -101,6 +101,21 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
+
+    function onBackPressed() {
+      console.log("Called onBackPressed in webview JS.");
+      CogEx.onBackPressed();
+    }
+    function onDataUpdated(jsonString) {
+      console.log("Called onDataUpdated in webview JS.", jsonString);
+      CogEx.onDataUpdated(jsonString);
+    }
+
+    function onError(code, message) {
+      console.error("Error", code, message);
+      CogEx.onError(code, message);
+    }
+
   </script>
 </body>
 

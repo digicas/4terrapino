@@ -9,5 +9,7 @@ import 'package:terrapino/app/app.dart';
 import 'package:terrapino/bootstrap.dart';
 
 void main() {
-  bootstrap(() => const App());
+  bootstrap(
+    App.new,
+  );
 }
