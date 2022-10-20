@@ -46,6 +46,17 @@ enum ActivityEventType {
   levelStarted('levelStarted'),
   levelFinished('levelFinished');
 
+  @override
+  String toString() {
+    switch (this) {
+      case ActivityEventType.levelFinished:
+        return 'levelFinished';
+
+      default:
+        return 'levelStarted';
+    }
+  }
+
   final String eventType;
   const ActivityEventType(this.eventType);
 
