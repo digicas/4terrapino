@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, no_default_cases
 import 'dart:convert';
 
 class ActivityEvent {
@@ -64,4 +64,17 @@ enum TaskType {
     return values.firstWhere((e) => e.type == type);
   }
   final String type;
+
+  @override
+  String toString() {
+    switch (this) {
+      case TaskType.wordle:
+        return 'wordle';
+
+      case TaskType.pyramid:
+        return 'pyramid';
+      default:
+        return 'funnel';
+    }
+  }
 }
