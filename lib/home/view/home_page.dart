@@ -51,7 +51,7 @@ class HomeView extends StatelessWidget {
   void handleOnLevelFinishedEvent(TaskType type, int level) {
     log('Level finished event');
     final eventDataJson = ActivityEvent(
-      event: ActivityEventType.levelStarted,
+      event: ActivityEventType.levelFinished,
       type: type,
       levelNumber: level,
       seconds: 9200,
