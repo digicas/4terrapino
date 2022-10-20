@@ -106,9 +106,9 @@
       console.log("Called onBackPressed in webview JS.");
       CogEx.onBackPressed();
     }
-    function onDataUpdated(jsonString) {
-      console.log("Called onDataUpdated in webview JS.", jsonString);
-      CogEx.onDataUpdated(jsonString);
+    function onEvent(jsonString) {
+      console.log("Called onEvent in webview JS.", jsonString);
+      CogEx.onEvent(jsonString);
     }
 
     function onError(code, message) {
