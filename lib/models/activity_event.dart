@@ -68,11 +68,15 @@ enum ActivityEventType {
 enum TaskType {
   funnel('funnel'),
   pyramid('pyramid'),
-  wordle('wordle');
+  wordle('wordle'),
+  undefined('undefined');
 
   const TaskType(this.type);
   factory TaskType.fromString(String type) {
-    return values.firstWhere((e) => e.type == type);
+    return values.firstWhere(
+      (e) => e.type == type,
+      orElse: () => TaskType.undefined,
+    );
   }
   final String type;
 

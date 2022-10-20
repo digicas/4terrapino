@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:terrapino/models/activity_event.dart';
 import 'package:terrapino/models/parse_error.dart';
 import 'package:terrapino/models/uri_result.dart';
 
@@ -11,6 +12,15 @@ Either<ParseError, UriResult> parseUri() {
       ParseError(
         code: 400,
         message: 'Parameter [type] is required',
+      )..onError(),
+    );
+  }
+
+  if (TaskType.fromString(type) == TaskType.undefined) {
+    return left(
+      ParseError(
+        code: 404,
+        message: 'Requested task type is not implemented yet',
       )..onError(),
     );
   }
