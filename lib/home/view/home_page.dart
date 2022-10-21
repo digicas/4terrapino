@@ -51,7 +51,7 @@ class HomeView extends StatelessWidget {
       event: EventType.levelFinished,
       type: type,
       levelNumber: level,
-      seconds: 9200,
+      duration: 9200,
       tries: 3,
     ).onEvent();
   }
