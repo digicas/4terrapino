@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:terrapino/models/activity_event.dart';
+import 'package:terrapino/models/enums/task_type.dart';
 import 'package:terrapino/models/parse_error.dart';
 import 'package:terrapino/models/uri_result.dart';
 

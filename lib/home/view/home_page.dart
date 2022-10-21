@@ -13,7 +13,8 @@ import 'dart:js';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:terrapino/home/home.dart';
-import 'package:terrapino/models/activity_event.dart';
+import 'package:terrapino/models/activity_event/activity_event.dart';
+import 'package:terrapino/models/enums/index.dart';
 import 'package:terrapino/models/uri_result.dart';
 
 class HomePage extends StatelessWidget {
@@ -37,7 +38,7 @@ class HomeView extends StatelessWidget {
     log('Level started event');
 
     ActivityEvent(
-      event: ActivityEventType.levelStarted,
+      event: EventType.levelStarted,
       type: type,
       levelNumber: level,
     ).onEvent();
@@ -47,7 +48,7 @@ class HomeView extends StatelessWidget {
     log('Level finished event');
 
     ActivityEvent(
-      event: ActivityEventType.levelFinished,
+      event: EventType.levelFinished,
       type: type,
       levelNumber: level,
       seconds: 9200,
