@@ -33,31 +33,31 @@ class HomePage extends StatelessWidget {
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
-  void handleOnLevelStartedEvent(TaskType type, int level) {
+  void _handleOnLevelStartedEvent(TaskType type, int level) {
     log('Level started event');
 
-    final eventDataJson = ActivityEvent(
+    ActivityEvent(
       event: ActivityEventType.levelStarted,
       type: type,
       levelNumber: level,
-    ).toJson();
-
-    context.callMethod(
-      'onEvent',
-      [eventDataJson],
-    );
+    ).onEvent();
   }
 
-  void handleOnLevelFinishedEvent(TaskType type, int level) {
+  void _handleOnLevelFinishedEvent(TaskType type, int level) {
     log('Level finished event');
-    final eventDataJson = ActivityEvent(
+
+    ActivityEvent(
       event: ActivityEventType.levelFinished,
       type: type,
       levelNumber: level,
       seconds: 9200,
       tries: 3,
-    ).toJson();
-    context.callMethod('onEvent', [eventDataJson]);
+    ).onEvent();
+  }
+
+  void _simulateOnBackPressed() {
+    log('On back pressed');
+    context.callMethod('onBackPressed');
   }
 
   @override
@@ -87,20 +87,25 @@ class HomeView extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       EventButton(
-                        title: 'Level Started',
-                        onPressed: () => handleOnLevelStartedEvent(
+                        title: 'Simulate Level Started',
+                        onPressed: () => _handleOnLevelStartedEvent(
                           TaskType.fromString(state.type),
                           state.level,
                         ),
                       ),
                       const SizedBox(width: 32),
                       EventButton(
-                        title: 'Level Finished',
-                        onPressed: () => handleOnLevelFinishedEvent(
+                        title: 'Simulate Level Finished',
+                        onPressed: () => _handleOnLevelFinishedEvent(
                           TaskType.fromString(state.type),
                           state.level,
                         ),
                       ),
+                      const SizedBox(width: 32),
+                      EventButton(
+                        title: 'Simulate on back pressed',
+                        onPressed: _simulateOnBackPressed,
+                      )
                     ],
                   );
                 },

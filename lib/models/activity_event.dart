@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first, no_default_cases
 import 'dart:convert';
+import 'dart:js';
 
 class ActivityEvent {
   ActivityEvent({
@@ -15,6 +16,10 @@ class ActivityEvent {
   final int levelNumber;
   final int? seconds;
   final int? tries;
+
+  void onEvent() {
+    context.callMethod('onEvent', [toJson()]);
+  }
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
