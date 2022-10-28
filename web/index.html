@@ -104,16 +104,17 @@
 
     function onBackPressed() {
       console.log("Called onBackPressed in webview JS.");
-      CogEx.onBackPressed();
+      // cogEx?.onBackPressed();
     }
     function onEvent(jsonString) {
       console.log("Called onEvent in webview JS.", jsonString);
-      CogEx.onEvent(jsonString);
+      // cogEx?.onEvent(jsonString);
     }
 
     function onError(code, message) {
       console.error("Error", code, message);
-      CogEx.onError(code, message);
+      // cogEx?.onError(code, message);
+
     }
 
   </script>
