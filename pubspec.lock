@@ -167,7 +167,7 @@ packages:
     description:
       path: cvicebnice_overlays
       ref: master
-      resolved-ref: "21d0c4fe640013ad4e829403670d3e06b98fe7ae"
+      resolved-ref: f21a2a3255ef498c24c6f8b826d229065500d8a8
       url: "https://github.com/digicas/flutter_cognitive_training_screens.git"
     source: git
     version: "0.0.1"
@@ -223,7 +223,7 @@ packages:
     description:
       path: flutter_cognitive_training_screens
       ref: master
-      resolved-ref: "21d0c4fe640013ad4e829403670d3e06b98fe7ae"
+      resolved-ref: f21a2a3255ef498c24c6f8b826d229065500d8a8
       url: "https://github.com/digicas/flutter_cognitive_training_screens.git"
     source: git
     version: "0.0.1"
@@ -242,7 +242,7 @@ packages:
     source: hosted
     version: "2.2.0"
   freezed_annotation:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: freezed_annotation
       url: "https://pub.dartlang.org"
