@@ -19,6 +19,11 @@ class HomePage extends StatelessWidget {
     );
     final stopwatch = Stopwatch()..start();
     return TaskScreen(
+      backOptionText: 'UKONČIT CVIČENÍ',
+      onBackOption: () {
+        handleOnBackPressed();
+        Navigator.of(context).popAndPushNamed('/end');
+      },
       onLevelFinished: (type, level) {
         stopwatch.stop();
         handleOnLevelFinishedEvent(
@@ -78,7 +83,7 @@ class HomeView extends StatelessWidget {
                   const SizedBox(width: 32),
                   const EventButton(
                     title: 'Simulate on back pressed',
-                    onPressed: simulateOnBackPressed,
+                    onPressed: handleOnBackPressed,
                   )
                 ],
               ),

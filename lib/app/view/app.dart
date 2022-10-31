@@ -7,6 +7,7 @@
 
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
+import 'package:terrapino/app/practice_end/practice_end.dart';
 import 'package:terrapino/home/home.dart';
 import 'package:terrapino/models/parse_error.dart';
 import 'package:terrapino/models/uri_result.dart';
@@ -36,6 +37,9 @@ class App extends StatelessWidget {
           uriResult: r,
         ),
       ),
+      routes: {
+        '/end': (context) => const PracticeEndPage(),
+      },
     );
   }
 }

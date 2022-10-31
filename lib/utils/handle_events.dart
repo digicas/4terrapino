@@ -28,7 +28,7 @@ void handleOnLevelFinishedEvent(TaskType type, int level, int duration) {
   ).onEvent();
 }
 
-void simulateOnBackPressed() {
+void handleOnBackPressed() {
   log('On back pressed');
   context.callMethod('onBackPressed');
 }
