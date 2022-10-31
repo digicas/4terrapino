@@ -34,7 +34,9 @@ class HomePage extends StatelessWidget {
       },
       onLevelChanged: (type, level) {
         handleOnLevelStartedEvent(TaskType.fromString(type.toString()), level);
-        stopwatch.reset();
+        stopwatch
+          ..reset()
+          ..start();
       },
       level: LevelTree.getLevelByLevelIndex(uriResult.level)!,
       taskType: uriResult.type == 'funnel'
