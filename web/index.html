@@ -104,20 +104,20 @@
 
     function onBackPressed() {
       console.log("Called onBackPressed in webview JS.");
-      if (cogEx) {
+      if (typeof cogEx !== 'undefined') {
         cogEx?.onBackPressed();
       }
     }
     function onEvent(jsonString) {
       console.log("Called onEvent in webview JS.", jsonString);
-      if (cogEx) {
+      if (typeof cogEx !== 'undefined') {
         cogEx?.onEvent(jsonString);
       }
     }
 
     function onError(code, message) {
       console.error("Error", code, message);
-      if (cogEx) {
+      if (typeof cogEx !== 'undefined') {
         cogEx?.onError(code, message);
       }
 
