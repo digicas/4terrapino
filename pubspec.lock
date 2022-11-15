@@ -769,7 +769,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "431d07df080018aa275d0cec4361887bcb1a8fa5"
+      resolved-ref: "6ed55fa6503b7bbaa47bfeea271f01839f487203"
       url: "https://github.com/digicas/wordle.git"
     source: git
     version: "0.0.1"
@@ -789,4 +789,4 @@ packages:
     version: "3.1.1"
 sdks:
   dart: ">=2.18.2 <3.0.0"
-  flutter: ">=3.3.8"
+  flutter: ">=3.3.3"

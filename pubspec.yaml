@@ -44,3 +44,7 @@ flutter:
   assets:
     - assets/
   generate: true
+  fonts:
+    - family: NotoSans
+      fonts:
+        - asset: assets/fonts/NotoSans-Regular.ttf
