@@ -17,7 +17,7 @@ class ActivityEvent {
   final EventType event;
   final TaskType type;
 
-  final int levelNumber;
+  final int? levelNumber;
   final int? duration;
   final int? tries;
 
@@ -25,7 +25,8 @@ class ActivityEvent {
     return ActivityEvent(
       event: EventType.fromString(map['event'] as String),
       type: TaskType.fromString(map['type'] as String),
-      levelNumber: map['levelNumber'] as int,
+      levelNumber:
+          map['levelNumber'] != null ? map['levelNumber'] as int : null,
       duration: map['duration'] != null ? map['duration'] as int : null,
       tries: map['tries'] != null ? map['tries'] as int : null,
     );
@@ -35,7 +36,7 @@ class ActivityEvent {
     return <String, dynamic>{
       'event': event.toString(),
       'type': type.toString(),
-      'levelNumber': levelNumber,
+      if (levelNumber != null) 'levelNumber': levelNumber,
       if (event == EventType.levelFinished) 'duration': duration,
       if (event == EventType.levelFinished) 'tries': tries,
     };

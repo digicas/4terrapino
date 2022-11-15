@@ -8,10 +8,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:terrapino/app/practice_end/practice_end.dart';
-import 'package:terrapino/home/home.dart';
+import 'package:terrapino/funnels/funnels.dart';
 import 'package:terrapino/models/parse_error.dart';
 import 'package:terrapino/models/uri_result.dart';
 import 'package:terrapino/utils/uri_parser.dart';
+import 'package:terrapino/wordle/view/wordle_page.dart';
 
 class App extends StatelessWidget {
   App({
@@ -33,9 +34,15 @@ class App extends StatelessWidget {
       ),
       home: uriResult.fold(
         (l) => Text('${l.code} ${l.message}'),
-        (r) => HomePage(
-          uriResult: r,
-        ),
+        (r) => r is UriResultFunnels
+            ? FunnelsPage(
+                uriResult: r,
+              )
+            : r is UriResultWordle
+                ? WordlePage(
+                    uriResult: r,
+                  )
+                : Container(),
       ),
       routes: {
         '/end': (context) => const PracticeEndPage(),

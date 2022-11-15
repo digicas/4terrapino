@@ -6,7 +6,7 @@ import 'dart:js';
 import 'package:terrapino/models/activity_event/activity_event.dart';
 import 'package:terrapino/models/enums/index.dart';
 
-void handleOnLevelStartedEvent(TaskType type, int level) {
+void handleOnLevelStartedEvent(TaskType type, int? level) {
   log('Level started event');
 
   ActivityEvent(
