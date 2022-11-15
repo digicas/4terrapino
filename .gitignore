@@ -124,3 +124,7 @@ app.*.map.json
 !.idea/codeStyles/
 !.idea/dictionaries/
 !.idea/runConfigurations/
+.dart_tool/dartpad/web_plugin_registrant.dart
+.dart_tool/version
+.dart_tool/package_config.json
+.dart_tool/package_config_subset
