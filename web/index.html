@@ -104,22 +104,16 @@
 
     function onBackPressed() {
       console.log("Called onBackPressed in webview JS.");
-      if (typeof cogEx !== 'undefined') {
-        cogEx?.onBackPressed();
-      }
+      parent.postMessage(JSON.stringify({ event: 'backPressed' }));
     }
     function onEvent(jsonString) {
       console.log("Called onEvent in webview JS.", jsonString);
-      if (typeof cogEx !== 'undefined') {
-        cogEx?.onEvent(jsonString);
-      }
+      parent.postMessage(jsonString);
     }
 
     function onError(code, message) {
       console.error("Error", code, message);
-      if (typeof cogEx !== 'undefined') {
-        cogEx?.onError(code, message);
-      }
+      parent.postMessage(JSON.stringify({ event: 'error', code: code, message: message }));
 
     }
 
