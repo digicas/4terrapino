@@ -11,9 +11,27 @@ class WordlePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    handleOnLevelStartedEvent(TaskType.fromString(uriResult.type), null);
+    ;
+    final stopwatch = Stopwatch()..start();
     return WordleGame(
       langs: uriResult.langs,
+      onLevelStarted: () {
+        handleOnLevelStartedEvent(TaskType.fromString(uriResult.type), null);
+        stopwatch
+          ..reset()
+          ..start();
+      },
+      onFinished: (tries) {
+        stopwatch.stop();
+        handleOnLevelFinishedEvent(
+          TaskType.fromString(
+            uriResult.type,
+          ),
+          null,
+          stopwatch.elapsedMilliseconds ~/ 1000,
+          tries,
+        );
+      },
     );
   }
 }

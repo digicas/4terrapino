@@ -30,6 +30,7 @@ class FunnelsPage extends StatelessWidget {
           TaskType.fromString(type.toString()),
           level,
           stopwatch.elapsedMilliseconds ~/ 1000,
+          null,
         );
       },
       onLevelChanged: (type, level) {

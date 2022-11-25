@@ -16,7 +16,12 @@ void handleOnLevelStartedEvent(TaskType type, int? level) {
   ).onEvent();
 }
 
-void handleOnLevelFinishedEvent(TaskType type, int level, int duration) {
+void handleOnLevelFinishedEvent(
+  TaskType type,
+  int? level,
+  int duration,
+  int? tries,
+) {
   log('Level finished event');
 
   ActivityEvent(
@@ -24,7 +29,7 @@ void handleOnLevelFinishedEvent(TaskType type, int level, int duration) {
     type: type,
     levelNumber: level,
     duration: duration,
-    tries: 0,
+    tries: tries ?? 0,
   ).onEvent();
 }
 
