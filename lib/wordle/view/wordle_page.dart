@@ -14,6 +14,7 @@ class WordlePage extends StatelessWidget {
     ;
     final stopwatch = Stopwatch()..start();
     return WordleGame(
+      menuImage: Image.asset('ada_head_only.png',height: 32),
       langs: uriResult.langs,
       onLevelStarted: () {
         handleOnLevelStartedEvent(TaskType.fromString(uriResult.type), null);
