@@ -7,6 +7,7 @@ Either<ParseError, UriResult> parseUri() {
   final typeString = Uri.base.queryParameters['type'];
   final levelParam = Uri.base.queryParameters['level'];
   final langsString = Uri.base.queryParameters['langs'];
+  final hintsString = Uri.base.queryParameters['hints'];
 
   if (typeString == null) {
     return left(
@@ -63,6 +64,11 @@ Either<ParseError, UriResult> parseUri() {
     }
 
     final activeLangs = langsString.split(',');
+    final hints = <String>[];
+
+    if (hintsString != null) {
+      hints.addAll(hintsString.split(','));
+    }
 
     for (final lang in activeLangs) {
       if (lang != 'en' && lang != 'cs' && lang != 'de') {
@@ -76,8 +82,20 @@ Either<ParseError, UriResult> parseUri() {
       }
     }
 
+    for (final lang in hints) {
+      if (lang != 'en' && lang != 'cs' && lang != 'de') {
+        return left(
+          ParseError(
+            code: 404,
+            message:
+                'Unsupported language [$lang] passed as a parameter for [hints]',
+          ),
+        );
+      }
+    }
+
     return right(
-      UriResultWordle(type: typeString, langs: activeLangs),
+      UriResultWordle(type: typeString, langs: activeLangs,hints: hints),
     );
   }
   return left(

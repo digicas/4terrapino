@@ -15,10 +15,13 @@ class UriResultFunnels extends UriResult {
 }
 
 class UriResultWordle extends UriResult {
-  UriResultWordle({
+  UriResultWordle(
+    {
     required super.type,
     required this.langs,
+    this.hints = const [], 
   });
 
   final List<String> langs;
+  final List<String> hints;
 }
