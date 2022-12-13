@@ -104,17 +104,16 @@
 
     function onBackPressed() {
       console.log("Called onBackPressed in webview JS.");
-      parent.postMessage(JSON.stringify({ event: 'backPressed' }));
+      parent.postMessage(JSON.stringify({ event: 'backPressed' }),'*');
     }
     function onEvent(jsonString) {
       console.log("Called onEvent in webview JS.", jsonString);
-      parent.postMessage(jsonString);
+      parent.postMessage(jsonString,'*');
     }
 
     function onError(code, message) {
       console.error("Error", code, message);
-      parent.postMessage(JSON.stringify({ event: 'error', code: code, message: message }));
-
+      parent.postMessage(JSON.stringify({ event: 'error', code: code, message: message }),'*');
     }
 
   </script>
