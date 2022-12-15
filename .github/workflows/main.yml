@@ -33,7 +33,6 @@ jobs:
         with:
           publish-dir: "./build/web"
           production-branch: master
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
           enable-pull-request-comment: false
           enable-commit-comment: true

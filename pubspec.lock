@@ -555,7 +555,7 @@ packages:
       name: shared_preferences_linux
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.1"
+    version: "2.1.2"
   shared_preferences_macos:
     dependency: transitive
     description:
@@ -583,7 +583,7 @@ packages:
       name: shared_preferences_windows
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.1"
+    version: "2.1.2"
   shelf:
     dependency: transitive
     description:
@@ -769,7 +769,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: e67f03d37b868b4a233e52e2a6240d6978eeffe2
+      resolved-ref: "00a256c67a474f610c7f6b992975a657e9556458"
       url: "https://github.com/digicas/wordle.git"
     source: git
     version: "0.0.1"
