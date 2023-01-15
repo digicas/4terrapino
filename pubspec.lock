@@ -862,7 +862,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: efab169c9466b67a182dbec621ed1a7ec584e2e0
+      resolved-ref: "39ffe455a3ddfbeaaabd82c22907e7dfe4710750"
       url: "https://github.com/digicas/wordle.git"
     source: git
     version: "0.0.1"
