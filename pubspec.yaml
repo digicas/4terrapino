@@ -14,11 +14,10 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.1.1
   flutter_cognitive_training_screens:
-    path: '../flutter_cognitive_training_screens/flutter_cognitive_training_screens'
-    # git:
-    #   url: https://github.com/digicas/flutter_cognitive_training_screens.git
-    #   path: flutter_cognitive_training_screens
-    #   ref: master
+    git:
+      url: https://github.com/digicas/flutter_cognitive_training_screens.git
+      path: flutter_cognitive_training_screens
+      ref: master
   freezed: ^2.1.0+1
   intl: ^0.17.0
   levels_dart_pyramid_funnels:
