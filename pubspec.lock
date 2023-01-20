@@ -258,9 +258,11 @@ packages:
   flutter_cognitive_training_screens:
     dependency: "direct main"
     description:
-      path: "../flutter_cognitive_training_screens/flutter_cognitive_training_screens"
-      relative: true
-    source: path
+      path: flutter_cognitive_training_screens
+      ref: master
+      resolved-ref: "22287329756029380789a4a46d96d072c220f161"
+      url: "https://github.com/digicas/flutter_cognitive_training_screens.git"
+    source: git
     version: "0.0.1"
   flutter_localizations:
     dependency: transitive
@@ -460,9 +462,11 @@ packages:
   on_screen_keyboard:
     dependency: transitive
     description:
-      path: "../flutter_minimalistic_onscreen_keyboard"
-      relative: true
-    source: path
+      path: "."
+      ref: master
+      resolved-ref: "57baf281768c942f1a1a4ac366f349c4aa28ec03"
+      url: "https://github.com/digicas/flutter_minimalistic_onscreen_keyboard.git"
+    source: git
     version: "0.0.1"
   package_config:
     dependency: transitive
