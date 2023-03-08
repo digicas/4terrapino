@@ -26,6 +26,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      themeMode: ThemeMode.light,
       theme: ThemeData(
         appBarTheme: const AppBarTheme(color: Colors.blue),
         colorScheme: ColorScheme.fromSwatch(
