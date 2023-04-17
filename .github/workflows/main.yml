@@ -17,6 +17,7 @@ jobs:
           channel: "stable"
       - run: flutter --version
       - run: flutter config --enable-web
+      - run: flutter packages upgrade
       - run: flutter build web -t './lib/main_development.dart' --web-renderer html --pwa-strategy=none
       - uses: actions/upload-artifact@master
         with:
