@@ -2,10 +2,10 @@ name: BUILD & DEPLOY
 on:
   push:
     branches: [master]
+  workflow_dispatch:
   pull_request:
     branches: [master]
-  workflow_dispatch:
-
+    
 jobs:
   build:
     runs-on: ubuntu-latest
