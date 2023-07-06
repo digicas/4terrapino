@@ -8,6 +8,7 @@ Either<ParseError, UriResult> parseUri() {
   final levelParam = Uri.base.queryParameters['level'];
   final langsString = Uri.base.queryParameters['langs'];
   final hintsString = Uri.base.queryParameters['hints'];
+  final translateString = Uri.base.queryParameters['translate'];
 
   if (typeString == null) {
     return left(
@@ -86,16 +87,35 @@ Either<ParseError, UriResult> parseUri() {
       if (lang != 'en' && lang != 'cs' && lang != 'de') {
         return left(
           ParseError(
-            code: 404,
-            message:
-                'Unsupported language [$lang] passed as a parameter for [hints]',
-          ),
+              code: 404,
+              message:
+                  'Unsupported language [$lang] passed as a parameter for [hints]'),
         );
       }
     }
 
+    if (translateString != null &&
+        (translateString != 'true' || translateString != 'false')) {
+      return left(
+        ParseError(
+          code: 404,
+          message:
+              'Invalid argument for parameter [translate] should be true or false got $translateString',
+        ),
+      );
+    }
+
+    var translate = false;
+
+    if (translateString == 'true') translate = true;
+
     return right(
-      UriResultWordle(type: typeString, langs: activeLangs,hints: hints),
+      UriResultWordle(
+        type: typeString,
+        langs: activeLangs,
+        hints: hints,
+        translate: translate,
+      ),
     );
   }
   return left(

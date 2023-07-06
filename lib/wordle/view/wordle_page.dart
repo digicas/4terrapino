@@ -13,7 +13,8 @@ class WordlePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final stopwatch = Stopwatch()..start();
     return WordleGame(
-      menuImage: Image.asset('assets/ada_head_only.png',height: 48),
+      showTranslation: uriResult.translate,
+      menuImage: Image.asset('assets/ada_head_only.png', height: 48),
       langs: uriResult.langs,
       langsWithHints: uriResult.hints,
       onLevelStarted: () {
