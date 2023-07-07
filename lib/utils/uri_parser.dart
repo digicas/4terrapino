@@ -51,7 +51,15 @@ Either<ParseError, UriResult> parseUri() {
       );
     }
 
-    return right(UriResultFunnels(type: typeString, level: level));
+    var langCode = 'cs';
+
+    if (!(langsString == null)) {
+      langCode = langsString.split(',').first;
+    }
+
+    return right(
+      UriResultFunnels(type: typeString, level: level, lang: langCode),
+    );
   }
 
   if (type == TaskType.wordle) {

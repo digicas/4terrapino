@@ -9,9 +9,11 @@ class UriResultFunnels extends UriResult {
   UriResultFunnels({
     required super.type,
     required this.level,
+    required this.lang,
   });
 
   final int level;
+  final String lang;
 }
 
 class UriResultWordle extends UriResult {

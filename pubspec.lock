@@ -190,10 +190,10 @@ packages:
     description:
       path: cvicebnice_overlays
       ref: master
-      resolved-ref: f9cb12fc258a556cb8e613311882a9a3cd41509b
+      resolved-ref: f346c6431e75636734503478b53908ad57c1a393
       url: "https://github.com/digicas/flutter_cognitive_training_screens.git"
     source: git
-    version: "0.0.1"
+    version: "0.0.2"
   dart_style:
     dependency: transitive
     description:
@@ -260,10 +260,10 @@ packages:
     description:
       path: flutter_cognitive_training_screens
       ref: master
-      resolved-ref: f9cb12fc258a556cb8e613311882a9a3cd41509b
+      resolved-ref: f346c6431e75636734503478b53908ad57c1a393
       url: "https://github.com/digicas/flutter_cognitive_training_screens.git"
     source: git
-    version: "0.0.2"
+    version: "0.0.7"
   flutter_localizations:
     dependency: transitive
     description: flutter
@@ -278,10 +278,10 @@ packages:
     dependency: transitive
     description:
       name: font_awesome_flutter
-      sha256: "875dbb9ec1ad30d68102019ceb682760d06c72747c1c5b7885781b95f88569cc"
+      sha256: "959ef4add147753f990b4a7c6cccb746d5792dbdc81b1cde99e62e7edb31b206"
       url: "https://pub.dev"
     source: hosted
-    version: "10.3.0"
+    version: "10.4.0"
   freezed:
     dependency: "direct main"
     description:
@@ -354,6 +354,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+  i18n:
+    dependency: transitive
+    description:
+      name: i18n
+      sha256: cbf95db340dc82fe2ea6aa8b85f86692c3f7d6ff97d0f7bcf4f56c02aa91cb74
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.4.1"
   intl:
     dependency: "direct main"
     description:
@@ -464,10 +472,10 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "135008fa2f9cdaf7e08f25c87d024959b2bd6f82"
+      resolved-ref: "31d3a040733839f9ca2637c41361dbc7963fc042"
       url: "https://github.com/digicas/flutter_minimalistic_onscreen_keyboard.git"
     source: git
-    version: "0.0.2"
+    version: "0.0.4"
   package_config:
     dependency: transitive
     description:
@@ -588,6 +596,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.1"
+  quick_log:
+    dependency: transitive
+    description:
+      name: quick_log
+      sha256: d6d8fe26f43554d36816d9a570305bfa0a6bb92da621d0973e3028a27f582188
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.3.0"
+  rxdart:
+    dependency: transitive
+    description:
+      name: rxdart
+      sha256: "0c7c0cedd93788d996e33041ffecda924cc54389199cde4e6a34b440f50044cb"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.27.7"
   shared_preferences:
     dependency: transitive
     description:

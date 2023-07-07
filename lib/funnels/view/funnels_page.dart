@@ -19,7 +19,9 @@ class FunnelsPage extends StatelessWidget {
     );
     final stopwatch = Stopwatch()..start();
     return TaskScreen(
-      backOptionText: 'UKONČIT CVIČENÍ',
+      lang: uriResult.lang,
+      backOptionText:
+          uriResult.lang == 'cs' ? 'UKONČIT CVIČENÍ' : 'END EXERCISE',
       onBackOption: () {
         handleOnBackPressed();
         Navigator.of(context).popAndPushNamed('/end');
