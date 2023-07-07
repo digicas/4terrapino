@@ -190,7 +190,7 @@ packages:
     description:
       path: cvicebnice_overlays
       ref: master
-      resolved-ref: f346c6431e75636734503478b53908ad57c1a393
+      resolved-ref: "619860e09be87e4b9916d67f69b64d50f2648271"
       url: "https://github.com/digicas/flutter_cognitive_training_screens.git"
     source: git
     version: "0.0.2"
@@ -260,7 +260,7 @@ packages:
     description:
       path: flutter_cognitive_training_screens
       ref: master
-      resolved-ref: f346c6431e75636734503478b53908ad57c1a393
+      resolved-ref: "619860e09be87e4b9916d67f69b64d50f2648271"
       url: "https://github.com/digicas/flutter_cognitive_training_screens.git"
     source: git
     version: "0.0.7"
