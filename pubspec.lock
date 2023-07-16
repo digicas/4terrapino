@@ -264,6 +264,14 @@ packages:
       url: "https://github.com/digicas/flutter_cognitive_training_screens.git"
     source: git
     version: "0.0.7"
+  flutter_localization:
+    dependency: transitive
+    description:
+      name: flutter_localization
+      sha256: "9afed0ae301ee3ca547bceb5132b50d0d2d539ad4da4131ea7fc89e3bdeb67d3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.12"
   flutter_localizations:
     dependency: transitive
     description: flutter
@@ -870,7 +878,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: "5af2b08dd4dfd0c1d79889bb5cc455aae1d83d70"
+      resolved-ref: ca92080ecbdfa9b99c8a3bd0d5163347de3c9324
       url: "https://github.com/digicas/wordle.git"
     source: git
     version: "0.0.1"
