@@ -102,19 +102,7 @@ Either<ParseError, UriResult> parseUri() {
       }
     }
 
-    if (translateString != null &&
-        (translateString != 'true' || translateString != 'false')) {
-      return left(
-        ParseError(
-          code: 404,
-          message:
-              'Invalid argument for parameter [translate] should be true or false got $translateString',
-        ),
-      );
-    }
-
     var translate = false;
-
     if (translateString == 'true') translate = true;
 
     return right(
