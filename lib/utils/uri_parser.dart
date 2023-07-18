@@ -85,7 +85,7 @@ Either<ParseError, UriResult> parseUri() {
           ParseError(
             code: 404,
             message:
-                'Unsupported language [$lang] passed as a parameter for [langs]',
+                '''Unsupported language [$lang] passed as a parameter for [langs]''',
           ),
         );
       }
@@ -95,9 +95,10 @@ Either<ParseError, UriResult> parseUri() {
       if (lang != 'en' && lang != 'cs' && lang != 'de') {
         return left(
           ParseError(
-              code: 404,
-              message:
-                  'Unsupported language [$lang] passed as a parameter for [hints]'),
+            code: 404,
+            message:
+                '''Unsupported language [$lang] passed as a parameter for [hints]''',
+          ),
         );
       }
     }

@@ -5,21 +5,18 @@ publish_to: none
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
-  flutter: 3.3.3
+  flutter: 3.10.6
 
 dependencies:
-  bloc: ^8.1.0
   dartz: ^0.10.1
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.1
   flutter_cognitive_training_screens:
     git:
       url: https://github.com/digicas/flutter_cognitive_training_screens.git
       path: flutter_cognitive_training_screens
       ref: master
-  freezed: ^2.1.0+1
-  intl: ^0.17.0
+  intl: 0.18.0
   levels_dart_pyramid_funnels:
     git:
       url: https://github.com/digicas/levels_dart_pyramid_funnels.git
@@ -29,10 +26,7 @@ dependencies:
       url: https://github.com/digicas/wordle.git
       ref: master
 dev_dependencies:
-  bloc_test: ^9.1.0
   build_runner: ^2.3.2
-  freezed_annotation: ^2.1.0
-  
   very_good_analysis: ^3.1.0
 
 flutter:
