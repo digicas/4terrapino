@@ -29,14 +29,14 @@ class FunnelsPage extends StatelessWidget {
       onLevelFinished: (type, level) {
         stopwatch.stop();
         handleOnLevelFinishedEvent(
-          TaskType.fromString(type.toString()),
+          TaskType.fromString(uriResult.type),
           level,
           stopwatch.elapsedMilliseconds ~/ 1000,
           null,
         );
       },
       onLevelChanged: (type, level) {
-        handleOnLevelStartedEvent(TaskType.fromString(type.toString()), level);
+        handleOnLevelStartedEvent(TaskType.fromString(uriResult.type), level);
         stopwatch
           ..reset()
           ..start();
